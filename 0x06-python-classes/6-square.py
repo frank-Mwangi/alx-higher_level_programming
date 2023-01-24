@@ -26,7 +26,6 @@ class Square:
         else:
             self.__size = value
 
-
     @property
     def position(self):
         return self.__position
