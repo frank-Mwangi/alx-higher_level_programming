@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defining a class named Square with size validation"""
+"""Defining a class named Square with size and position
+   validation"""
 
 
 class Square:
@@ -9,8 +10,8 @@ class Square:
         size - should be an integer greater than 0
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
