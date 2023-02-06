@@ -5,7 +5,7 @@ Module containing class BaseGeometry
 
 
 class BaseGeometry:
-    """Empty class"""
+    """Defining the class attributes"""
     pass
 
     def area(self):
@@ -13,6 +13,7 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+        """Validate if parameter is integer"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
