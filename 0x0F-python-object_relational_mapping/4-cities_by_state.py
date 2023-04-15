@@ -14,8 +14,8 @@ if __name__ == "__main__":
     cur = db.cursor()
     state = sys.argv[4]
     cur.execute("SELECT cities.id, cities.name, states.name\
-                FROM cities INNER JOIN states ON\
-                cities.states_id=states.id"))
+            FROM cities INNER JOIN states ON\
+            cities.states_id=states.id")
     query_rows = cur.fetchall()
     for row in query_rows:
         if row[1] == state:
