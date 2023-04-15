@@ -14,14 +14,14 @@ if __name__ == "__main__":
     cur = db.cursor()
     state = sys.argv[4]
     cur.execute("SELECT cities.name\
-            FROM cities JOIN states ON\
-            cities.state_id=states.id\
-            WHERE states.name LIKE %s\
-            ORDER BY cities.id", (state_name,))
+        FROM cities JOIN states ON\
+        cities.state_id=states.id\
+        WHERE states.name LIKE %s\
+        ORDER BY cities.id", (state,))
     query_rows = cur.fetchall()
     end = ""
     for row in query_rows:
         end += row[0] + ", "
-        print(end[0:-2:)
+        print(end[0:-2:])
     cur.close()
     db.close()
