@@ -25,3 +25,5 @@ if __name__ == "__main__":
     result = session.query(State).filter_by(id=match).first()
     if result is not None:
         result.name = "New Mexico"
+        session.add(result)
+        session.commit()
