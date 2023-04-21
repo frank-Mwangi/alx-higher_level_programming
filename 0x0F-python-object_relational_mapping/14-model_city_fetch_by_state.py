@@ -5,7 +5,7 @@ List all State objects from hbtn_0e_6_usa
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from model_city import City
 
 if __name__ == "__main__":
@@ -16,7 +16,7 @@ if __name__ == "__main__":
             sys.argv[2],
             sys.argv[3]),
         pool_pre_ping=True)
-    Session = sessionmaker(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     for city, state in session.query(City, State)\
