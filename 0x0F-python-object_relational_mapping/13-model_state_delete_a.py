@@ -24,4 +24,4 @@ if __name__ == "__main__":
     for result in session.query(State).order_by(State.id).all():
         if "a" in result.name:
             session.delete(result)
-            session.commit()
+    session.commit()
