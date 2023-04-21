@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-List all State objects that contain
-the letter a from hbtn_0e_6_usa
+Delete all State objects that have
+the letter a in their name from hbtn_0e_6_usa
 """
 
 from model_state import Base, State
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for result in session.query(State):
-        if "a" in result.name:
-            session.delete(result)
+    for state in session.query(State):
+        if "a" in state.name:
+            session.delete(state)
     session.commit()
