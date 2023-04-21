@@ -5,6 +5,7 @@ Defines class City
 """
 
 
+from model_state import Base
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
