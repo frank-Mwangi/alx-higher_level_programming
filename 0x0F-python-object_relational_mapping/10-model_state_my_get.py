@@ -22,6 +22,8 @@ if __name__ == "__main__":
     session = Session()
 
     match = sys.argv[4]
-    result = session.query(State).filter_by(name=match).all()
+    result = session.query(State).filter_by(name=match).first()
     if result is not None:
         print("{}".format(result.id))
+    else:
+        print("Not found")
