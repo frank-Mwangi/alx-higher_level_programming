@@ -21,7 +21,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for result in session.query(State).order_by(State.id).all():
+    for result in session.query(State):
         if "a" in result.name:
             session.delete(result)
     session.commit()
