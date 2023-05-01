@@ -14,11 +14,11 @@ if __name__ = "__main__":
         letter = sys.argv[1]
     url = "http://0.0.0.0:5000/search_user"
     res = requests.post(url, data={'q': letter})
-    try:
+    if res.headers.get('content-type') == 'application/json':
         response = res.json()
         if response == {}:
             print("No result")
         else:
             print(f"[{response.get('id')}] {response.get('name')}")
-    except ValueError:
+    else:
         print("Not a valid JSON")
