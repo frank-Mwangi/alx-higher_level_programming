@@ -1,4 +1,4 @@
-# /usr/bin/python3
+#!/usr/bin/python3
 """
 Sends POST request to given url and searches for letter
 """
