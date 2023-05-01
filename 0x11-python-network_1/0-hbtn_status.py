@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# sends GET request to https://alx-intranet.hbtn.io/status
+"""
+sends GET request to https://alx-intranet.hbtn.io/status
+"""
 
 import urllib.request
 
