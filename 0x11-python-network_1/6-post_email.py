@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
 Send POST request to URL with email parameter
-Display the body of the response 
+Display the body of the response
 """
-
 import sys
 import requests
 
